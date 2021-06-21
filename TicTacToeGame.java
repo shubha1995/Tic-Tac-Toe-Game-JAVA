@@ -1,5 +1,5 @@
 package com.tictactoe;
-
+import java.util.Scanner;
 
 public class TicTacToeGame {
 	private static char[] element;
@@ -7,6 +7,7 @@ public class TicTacToeGame {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Tic Tac Toe Game");
 		board();
+		userinput();
 	}
 	
    	/*Create a board of char[] of size 10
@@ -19,4 +20,25 @@ public class TicTacToeGame {
 			element[i]='.';
 		}
 	}
+	private static void userinput() {
+		 Scanner in=new Scanner(System.in);
+		  
+		  //Mark Selection
+		  System.out.println(" Select Your Marker (O or X): ");
+		  
+		 char usermark=in.next().charAt(0);
+		  char computermark;
+		  if (usermark=='X') {
+		  computermark='O';
+		  System.out.println("User mark is :" +usermark);}
+		  
+		  else
+		   computermark='X';
+		  System.out.println("User mark is :" +usermark);
+	}
 }
+
+	
+
+
+
